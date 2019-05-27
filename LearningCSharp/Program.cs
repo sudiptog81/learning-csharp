@@ -6,10 +6,12 @@ namespace LearningCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Int    : {0} {1}", int.MinValue, int.MaxValue);
-            Console.WriteLine("Byte   : {0} {1}", byte.MinValue, byte.MaxValue);
-            Console.WriteLine("Float  : {0} {1}", float.MinValue, float.MaxValue);
-            Console.WriteLine("Decimal: {0} {1}", decimal.MinValue, decimal.MaxValue);
+            Console.WriteLine("Enter radius of the circle: ");
+
+            const float Pi = 3.14f;
+            int Radius = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"Area: {Pi * (Radius * Radius)}");
 
             Console.ReadKey();
         }
