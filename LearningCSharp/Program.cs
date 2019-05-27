@@ -6,19 +6,10 @@ namespace LearningCSharp
     {
         static void Main(string[] args)
         {
-            var num = 2;
-            var count = 10;
-            var totalPrice = 20.95f;
-            var character = 'A';
-            var firstName = "Sudipto";
-            var isAdmin = true;
-
-            Console.WriteLine(num);
-            Console.WriteLine(count);
-            Console.WriteLine(totalPrice);
-            Console.WriteLine(character);
-            Console.WriteLine(firstName);
-            Console.WriteLine(isAdmin);
+            Console.WriteLine("Int    : {0} {1}", int.MinValue, int.MaxValue);
+            Console.WriteLine("Byte   : {0} {1}", byte.MinValue, byte.MaxValue);
+            Console.WriteLine("Float  : {0} {1}", float.MinValue, float.MaxValue);
+            Console.WriteLine("Decimal: {0} {1}", decimal.MinValue, decimal.MaxValue);
 
             Console.ReadKey();
         }
