@@ -6,12 +6,61 @@ namespace LearningCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter radius of the circle: ");
+            {
+                // No Casting Reqired
+                byte b = 1;
+                int i = b;
+                Console.WriteLine(i);
+            }
 
-            const float Pi = 3.14f;
-            int Radius = Convert.ToInt32(Console.ReadLine());
+            {
+                // Casting Int32 to Byte
+                int i = 1;
+                byte b = (byte)i;
+                Console.WriteLine(b);
+            }
 
-            Console.WriteLine($"Area: {Pi * (Radius * Radius)}");
+            {
+                // Overflow causes data loss
+                int i = 1000;
+                byte b = (byte)i;
+                Console.WriteLine(b);
+            }
+
+            {
+                string number = "1234";
+                // Cannot Cast Non-Compatible Types
+                // int i = (int)number;
+                int i = Convert.ToInt32(number);
+                Console.WriteLine(i);
+            }
+
+            {
+                // Handling Exceptions
+                try
+                {
+                    Console.WriteLine("Enter a number:");
+                    string number = Console.ReadLine();
+                    byte b = Convert.ToByte(number);
+                    Console.WriteLine(b);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("String could not be converted to a byte :(");
+                }
+
+                try
+                {
+                    Console.WriteLine("Enter a boolean:");
+                    string boolean = Console.ReadLine();
+                    bool b = Convert.ToBoolean(boolean);
+                    Console.WriteLine(b);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("String could not be converted to a bool :(");
+                }
+            }
 
             Console.ReadKey();
         }
