@@ -6,12 +6,12 @@ namespace LearningCSharp
     {
         static void Main(string[] args)
         {
-            byte num = 2;
-            int count = 10;
-            float totalPrice = 20.95f;
-            char character = 'A';
-            string firstName = "Sudipto";
-            bool isAdmin = true;
+            var num = 2;
+            var count = 10;
+            var totalPrice = 20.95f;
+            var character = 'A';
+            var firstName = "Sudipto";
+            var isAdmin = true;
 
             Console.WriteLine(num);
             Console.WriteLine(count);
